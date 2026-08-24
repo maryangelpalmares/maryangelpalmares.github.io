@@ -166,10 +166,6 @@
   .nav-actions {
     gap: 0.5rem;
   }
-
-  .nav-resume {
-    display: none;
-  }
 }
 
 @media (max-width: 800px) {
