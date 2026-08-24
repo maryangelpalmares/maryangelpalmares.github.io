@@ -1,0 +1,645 @@
+/* SKILLS SECTION */
+
+.skills-section {
+  padding: 120px 0;
+  background: #f7f9fc;
+  font-family: var(--font-display);
+}
+
+
+.skills-section .container {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* SECTION HEADER */
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #2563C9;
+  text-transform: uppercase;
+}
+
+.section-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #2563C9;
+}
+
+
+.section-heading h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  color: #000;
+}
+.section-heading h2 span {
+  color: #2563C9;
+}
+
+
+.section-description {
+  margin: 0;
+  max-width: 680px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #647084;
+}
+
+
+/* MAIN SKILLS LAYOUT */
+
+.skills-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(360px, 0.85fr);
+  align-items: start;
+  gap: 40px;
+  margin-top: 0;
+}
+
+
+
+/* LEFT TECHNOLOGY CARD */
+
+.tech-slider-wrapper {
+  height: 636px;
+  min-height: 636px;
+  max-height: 636px;
+
+  padding: 30px;
+
+  border: 1px solid #d5deea;
+  border-radius: 32px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 24px 60px rgba(42, 70, 110, 0.08);
+
+  overflow: hidden;
+}
+
+
+/* TECHNOLOGY HEADER */
+
+.tech-slider-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid #e1e7ef;
+}
+
+
+.tech-slider-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+
+  color: #2563C9;
+}
+
+
+.tech-slider-dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #2563C9;
+
+  box-shadow:
+    0 0 0 8px rgba(57, 116, 184, 0.08);
+}
+
+
+.tech-slider-hint {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+
+  color: #7a8696;
+}
+
+
+/* VIEWPORT */
+
+.tech-viewport {
+  width: 100%;
+
+  margin-top: 34px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  cursor: grab;
+
+  padding-bottom: 8px;
+}
+
+
+.tech-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+
+.tech-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+
+/* TWO-ROW TECHNOLOGY GRID */
+
+.tech-slider {
+  display: grid;
+
+  grid-template-rows:
+    repeat(2, 150px);
+
+  grid-auto-flow: column;
+
+  grid-auto-columns: 128px;
+
+  gap: 20px;
+
+  width: max-content;
+
+  padding: 2px;
+}
+
+
+/* TECHNOLOGY ITEM */
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  width: 128px;
+  height: 150px;
+
+  padding: 18px 14px;
+
+  border: 1px solid #d9e1eb;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.tech-item:hover {
+  transform: translateY(-3px);
+
+  border-color: #7da6d7;
+
+  box-shadow:
+    0 14px 28px rgba(57, 116, 184, 0.12);
+}
+
+
+.tech-item.active {
+  border-color: #3974b8;
+
+  background: #f7fbff;
+
+  box-shadow:
+    0 16px 32px rgba(57, 116, 184, 0.14);
+}
+
+
+/* TECHNOLOGY ICON */
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+}
+
+
+.tech-icon img {
+  display: block;
+
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+}
+
+
+/* TECHNOLOGY NAME */
+
+.tech-name {
+  width: 100%;
+
+  overflow: hidden;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  color: #596779;
+
+  text-align: center;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.tech-item.active .tech-name {
+  color: #315d91;
+}
+
+
+/* SCROLL HINT */
+
+.slider-scroll-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 34px;
+
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+
+  color: #748092;
+}
+
+
+.slider-scroll-indicator span {
+  width: 40px;
+  height: 2px;
+
+  background: #3974b8;
+}
+
+
+/* TECHNOLOGY INSPECTOR */
+
+.tech-inspector {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  min-height: 0;
+
+  padding: 30px;
+
+  border: 1px solid #d5deea;
+  border-radius: 32px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 24px 60px rgba(42, 70, 110, 0.08);
+}
+
+
+/* INSPECTOR HEADER */
+
+.inspector-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid #e1e7ef;
+}
+
+
+.inspector-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+
+  color: #596779;
+}
+
+
+.inspector-dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #2563C9;
+
+  box-shadow:
+    0 0 0 8px rgba(57, 116, 184, 0.08);
+}
+
+
+/* INSPECTOR MAIN */
+
+.inspector-main {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 38px 0;
+}
+
+
+.inspector-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 108px;
+  height: 108px;
+
+  padding: 20px;
+
+  border: 1px solid #ccd8e6;
+  border-radius: 28px;
+
+  background: #f8fbff;
+}
+
+
+.inspector-icon img {
+  display: block;
+
+  width: 64px;
+  height: 64px;
+
+  object-fit: contain;
+}
+
+
+.inspector-title-group h3 {
+  margin: 0 0 10px;
+
+  font-size: clamp(1.8rem, 2.5vw, 2.35rem);
+  line-height: 1.15;
+
+  color: #293547;
+}
+
+
+.inspector-title-group p {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: #45658c;
+}
+
+
+/* INSPECTOR CONTENT */
+
+.inspector-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 34px;
+}
+
+
+.inspector-section-label {
+  margin: 0 0 16px;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+
+  color: #697585;
+}
+
+
+.inspector-description {
+  margin: 0;
+
+  font-size: 1.05rem;
+  line-height: 1.85;
+
+  color: #617082;
+}
+
+
+/* TAGS */
+
+.inspector-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.inspector-tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 9px 16px;
+
+  border: 1px solid #ccd8e6;
+  border-radius: 14px;
+
+  background: #f8fbff;
+
+  font-size: 0.88rem;
+  font-weight: 700;
+
+  color: #5d6d7f;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+  .skills-showcase {
+    grid-template-columns: 1fr;
+  }
+
+
+  .tech-slider-wrapper {
+    width: 100%;
+  }
+
+
+  .tech-inspector {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .skills-section {
+    padding: 90px 0;
+  }
+
+
+  .skills-section .container {
+    width: min(100% - 32px, 1280px);
+  }
+
+
+  .tech-slider-wrapper {
+    height: 590px;
+    min-height: 590px;
+    max-height: 590px;
+
+    padding: 22px;
+
+    border-radius: 24px;
+  }
+
+
+  .tech-inspector {
+    padding: 22px;
+
+    border-radius: 24px;
+  }
+
+
+  .tech-slider-label {
+    padding-bottom: 22px;
+  }
+
+
+  .tech-slider-hint {
+    display: none;
+  }
+
+
+  .tech-slider {
+    grid-auto-columns: 112px;
+
+    grid-template-rows:
+      repeat(2, 132px);
+
+    gap: 16px;
+  }
+
+
+  .tech-item {
+    width: 112px;
+    height: 132px;
+
+    border-radius: 20px;
+  }
+
+
+  .tech-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .tech-name {
+    font-size: 0.72rem;
+  }
+
+
+  .inspector-main {
+    gap: 18px;
+
+    padding: 30px 0;
+  }
+
+
+  .inspector-icon {
+    width: 82px;
+    height: 82px;
+
+    padding: 15px;
+
+    border-radius: 22px;
+  }
+
+
+  .inspector-icon img {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .inspector-title-group h3 {
+    font-size: 1.7rem;
+  }
+
+
+  .inspector-description {
+    font-size: 0.98rem;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .tech-slider-wrapper {
+    height: 550px;
+    min-height: 550px;
+    max-height: 550px;
+  }
+
+
+  .inspector-main {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  .inspector-title-group h3 {
+    font-size: 1.8rem;
+  }
+
+}
